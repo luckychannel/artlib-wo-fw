@@ -1,0 +1,128 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background: #def;
+}
+
+.page {
+	position: relative;
+	width: 100%;
+}
+.page:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.semipage-1 {
+	position: relative;
+	right: 50%;
+	float: right;
+}
+.semipage-2 {
+	position: relative;
+	z-index: 1;
+	right: -50%;
+}
+
+#books {
+	width: 720px;
+	background: #def;
+	font-family: Tahoma, Geneva, Sans;
+	font-size: 14px;
+}
+thead td {
+	text-align: center;
+	font-size: 26px;
+	color: #666;
+	letter-spacing: 1.3pt;
+}
+thead td:first-child {
+	font-size: 14px;
+	width: 32px;
+	text-align: center;
+}
+td {
+	padding: 4px 7px;
+	border-top: 4px solid #def;
+	background: #fff;
+}
+td:first-child {
+	text-align: right;
+	border-right: dotted 2px #def;
+}
+.book, .next {
+	cursor: pointer;
+}
+.book:hover td {
+	background: #fed;
+}
+.book:active td {
+	color: red;
+	background: #def;
+}
+#books .next {
+	padding: 10px;
+	text-align: center;
+	letter-spacing: 1.3pt;
+	word-spacing: 5pt;
+	border: 0px solid transparent;
+	border-top: 4px solid #def;
+	-khtml-border-radius: 0 0 30px 30px;
+	-webkit-border-radius: 0 0 30px 30px;
+	-moz-border-radius: 0 0 30px 30px;
+	border-radius: 0 0 30px 30px;
+	background: #eff;
+}
+#books .next:hover {
+	background: #fee;
+}
+#books .next span {
+	color: #555;
+	border-bottom: 2px dotted #777;
+}
+
+#window {
+	display: none;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 600px;
+	z-index: 9999;
+}
+#window .win-inner {
+	padding: 20px;
+	background: #e4e4e4;
+}
+#window .win-inner .desc-title {
+	display:inline-block;
+	position: absolute;
+	left: 20px;
+	line-height: 20px;
+	font-size: 20px;
+}
+#mask {
+	background: #000;
+	display: none;
+	left: 0;
+	position: absolute;
+	top: 0;
+	z-index: 9000;
+}
+#window p:first-child {
+	margin-top: 0;
+	padding-top: 0;
+	padding-bottom: 8px;
+	margin-bottom: 8px;
+	border-bottom: solid 2px #777;
+	text-align: right;
+}
+.close {
+	color: blue;
+	cursor: pointer;
+	text-decoration: underline;
+}
+.close:active {
+	color: red;
+}
